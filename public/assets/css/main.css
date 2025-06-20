@@ -17,6 +17,7 @@
   width: 200px;
   border: 2px solid rgb(97, 45, 45);
   border-radius: 10px;
+  cursor: pointer;
 }
 
 #img-logo:hover {
