@@ -1,0 +1,7 @@
+# Ignorar
+node_modules/
+.DS_Store
+*.log
+
+# Manter
+!.vscode/settings.json

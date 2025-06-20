@@ -1,0 +1,25 @@
+*{
+    background-color: black;
+    color: white;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-item:hover{
+    color: rgb(97, 45, 45);
+}
+
+#img-logo {
+  width: 200px;
+  border: 2px solid rgb(97, 45, 45);
+  border-radius: 10px;
+}
+
+#img-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
