@@ -1,20 +1,25 @@
+
 // Cria o elemento do menu
 const menuDiv = document.createElement('div');
 menuDiv.className = 'menu';
+
 
 // Detecta se estamos na página principal (index.html)
 const isIndexPage = window.location.pathname.endsWith('index.html') || 
                    window.location.pathname.endsWith('/');
 
+
 // Define os caminhos base
 const basePath = isIndexPage ? '' : '../';
 const pagePath = isIndexPage ? 'pages/' : '';
 
+
+// Define os itens do menu
 const menuItems = [
     { type: 'link', text: 'Sobre', page: `${pagePath}about.html` },
     { type: 'link', text: 'Equipe', page: `${pagePath}team.html` },
     { type: 'link', text: 'Galeria', page: `${pagePath}gallery.html` },
-    { type: 'image', src: `${basePath}assets/images/logo.png`, alt: 'Logo da RTG Tattoo' },
+    { type: 'image', src: `${basePath}assets/images/logo-png.png`, alt: 'Logo da RTG Tattoo' },
     { type: 'link', text: 'Orçamento', page: `${pagePath}orcamento.html` },
     { type: 'link', text: 'Endereço', page: `${pagePath}address.html` },
     { type: 'link', text: 'Contato', page: `${pagePath}contact.html` }

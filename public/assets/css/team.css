@@ -1,0 +1,29 @@
+
+
+.lado-direito{
+    border: 2px dotted rgb(97, 45, 45);
+    width: 50%;
+    margin: 10px;
+    text-align: right;
+    color: aqua;
+    background-color: rgba(255, 216, 216, 0.164);
+    
+}
+
+
+.lado-esquerdo{
+    border: 2px dotted rgb(97, 45, 45);
+    width: 50%;
+    margin: 10px;
+    text-align: left;
+    color: aqua;
+    background-color: rgba(255, 216, 216, 0.164);
+    
+}
+
+#img-TESTE{
+    border: 2px solid rgb(97, 45, 45);
+    border-radius: 10px;
+    cursor: pointer;
+    width: 40%;
+}

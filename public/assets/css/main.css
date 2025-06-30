@@ -1,36 +1,139 @@
 *{
-    background-color: black;
-    color: white;
+  background-size: 60%;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: white;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  background-image: url('../images/logo-desfocada.jpg');
+  background-size: 60%;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: white;
+  margin: 0;
+  min-height: 100vh;
 }
 
 .menu{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-item{
+  margin: 0 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
 }
 
 .menu-item:hover{
-    color: rgb(97, 45, 45);
+  color: rgb(97, 45, 45);
+  transition: color 0.2s ease-in-out;
 }
 
 #img-logo {
-  width: 200px;
+  width: 100px;
   border: 2px solid rgb(97, 45, 45);
-  border-radius: 10px;
+  border-radius: 30px;
   cursor: pointer;
 }
 
 #img-logo:hover {
-  opacity: 1;
-  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  opacity: 0.85;
+  transform: scale(1.07);
 }
 
-#plano-de-fundo
-{
-  background-image: url('../images/logo-desfocada.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  height: 100vh;
+h1{
+  margin: 0;
+}
+
+#footer-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-top: 1px solid rgb(97, 45, 45);
+}
+
+.menu-footer {
+    display: flex;
+    gap: 30px;
+}
+
+.social-icon {
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.15);
+}
+
+.icon-img {
+    width: 32px;
+    height: 32px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover .icon-img {
+    filter: invert(27%) sepia(35%) saturate(928%) hue-rotate(314deg) brightness(92%) contrast(87%);
+}
+
+.footer-icon {
+    font-size: 2rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover .footer-icon {
+    color: rgb(97, 45, 45);
+}
+
+
+
+VERIFICAR DAQUI PRA BAIXO
+
+
+2. Adicione estas regras para o rodapé e ícones
+css
+#footer-menu, 
+.menu-footer, 
+.social-icon, 
+.social-icon * {
+  background: none !important;
+  background-image: none !important;
+}
+
+.social-icon {
+  display: inline-block;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.social-icon:hover {
+  background: rgba(97, 45, 45, 0.3) !important;
+}
+3. Atualize o estilo dos ícones Font Awesome
+css
+.footer-icon {
+  font-size: 2rem;
+  color: white;
+  transition: color 0.3s ease;
+  /* Garante que o ícone em si não tenha fundo */
+  background: none !important; 
+  display: block;
+}
+
+.social-icon:hover .footer-icon {
+  color: rgb(97, 45, 45);
 }
