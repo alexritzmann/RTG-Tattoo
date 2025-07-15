@@ -1,37 +1,33 @@
-
-const menuDiv = document.createElement('div');
-menuDiv.className = 'menu';
-
-const menuItems = 
-[
-    { type: 'link', text: 'Sobre', href: 'pages/about.html' },
-    { type: 'link', text: 'Equipe', href: 'pages/team.html' },
-    { type: 'link', text: 'Galeria', href: 'pages/gallery.html' },
-    { type: 'image', src: 'assets/images/logo.png', alt: 'Logo da RTG Tattoo' },
-    { type: 'link', text: 'Orçamento', href: 'pages/orcamento.html' },
-    { type: 'link', text: 'Endereço', href: 'pages/address.html' },
-    { type: 'link', text: 'Contato', href: 'pages/contact.html' }
-];
-
-menuItems.forEach(item => {
-    const itemContainer = document.createElement('div');
+// Script para enviar formulário por email
+document.getElementById('form-orcamento').addEventListener('submit', function(e) {
+    e.preventDefault();
     
-    if (item.type === 'link') {
-        const link = document.createElement('a');
-        link.className = 'menu-item';
-        link.href = item.href;
-        link.textContent = item.text;
-        itemContainer.appendChild(link);
-    } 
-    else if (item.type === 'image') {
-        const logo = document.createElement('img');
-        logo.id = 'img-logo';
-        logo.src = item.src;
-        logo.alt = item.alt;
-        itemContainer.appendChild(logo);
-    }
+    const nome = encodeURIComponent(document.getElementById('nome').value);
+    const email = encodeURIComponent(document.getElementById('email').value);
+    const telefone = encodeURIComponent(document.getElementById('telefone').value);
+    const tamanho = encodeURIComponent(document.getElementById('tamanho').value);
+    const local = encodeURIComponent(document.getElementById('local').value);
+    const descricao = encodeURIComponent(document.getElementById('descricao').value);
+    const referencia = encodeURIComponent(document.getElementById('referencia').value);
     
-    menuDiv.appendChild(itemContainer);
+    const assunto = "Solicitação de Orçamento - " + nome;
+    const corpo = `Nome: ${nome}%0AEmail: ${email}%0ATelefone: ${telefone}%0A%0ATamanho: ${tamanho}%0ALocal: ${local}%0A%0ADescrição:%0A${descricao}%0A%0AReferência:%0A${referencia}`;
+    
+    window.location.href = `mailto:studio@rtgtattoo.com.br?subject=${assunto}&body=${corpo}`;
+    
+    // Feedback visual
+    const btn = this.querySelector('button');
+    btn.innerHTML = '<i class="fas fa-check"></i> Enviado!';
+    btn.disabled = true;
+    setTimeout(() => {
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Solicitação';
+        btn.disabled = false;
+    }, 3000);
 });
 
-document.getElementById('header-menu').appendChild(menuDiv);
+// Menu mobile toggle
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.menu-items').classList.toggle('active');
+    this.querySelector('i').classList.toggle('fa-bars');
+    this.querySelector('i').classList.toggle('fa-times');
+});

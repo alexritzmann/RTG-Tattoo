@@ -5,16 +5,352 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="assets/js/menu.js" defer></script>
     <script src="assets/js/menu-footer.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
     
     <title>RTG Tattoo</title>
 </head>
 <body>
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="assets/js/menu-footer.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    
+    <title>RTG Tattoo</title>
+</head>
+<body>
+    <!-- Menu Hamburguer para Mobile -->
+    <button class="menu-toggle" aria-label="Abrir menu">
+        <i class="fas fa-bars"></i>
+    </button>
 
-    <header id="header-menu"></header>
-    <main>MAIN SECTION</main>
-    <footer id="footer-menu"></footer>
+    <header id="header-menu">
+        <menu>
+            <nav>
+                <ul class="menu-items">
+                    <li><a class="menu-link" href="#section-about">Sobre</a></li>
+                    <li><a class="menu-link" href="#section-team">Equipe</a></li>
+                    <li><a class="menu-link" href="#section-gallery">Galeria</a></li>
+                    <li class="logo-item"> 
+                        <a href="#">
+                            <img id="img-logo" src="assets/images/logo-png.png" alt="Logo RTG">
+                        </a>
+                    </li>
+                    <li><a class="menu-link" href="#section-orcamento">Orçamento</a></li>
+                    <li><a class="menu-link" href="#section-address">Endereço</a></li>
+                    <li><a class="menu-link" href="#section-contact">Contato</a></li>
+                </ul>
+            </nav>
+        </menu>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="section-principal">
+            <div class="hero-content">
+                <h1>Bem-Vindo à</h1>
+                <h1>RTG Tattoo!</h1>
+                <p>Arte que marca histórias</p>
+                <a href="#section-orcamento" class="btn">Solicitar Orçamento</a>
+            </div>
+        </section>
+
+        <!-- Sobre -->
+        <section id="section-about" class="section">
+            <br>
+            <div class="container">
+                <h2 class="section-title">Nossa Essência</h2>
+                <div class="about-content">
+                    <p>
+                        Somos mais que um estúdio de tatuagem: somos contadores de histórias em pele. 
+                        Cada traço que fazemos carrega identidade, paixão e um pouco de magia. 
+                        Aqui, sua ideia ganha vida pelas mãos de artistas excepcionais, em um espaço seguro e inspirador.
+                    </p>
+                    
+                    <div class="about-grid">
+                        <div class="about-card">
+                            <i class="fas fa-palette"></i>
+                            <h3>Galeria</h3>
+                            <p>Veja obras que já marcaram corpos e almas</p>
+                        </div>
+                        <div class="about-card">
+                            <i class="fas fa-users"></i>
+                            <h3>Equipe</h3>
+                            <p>Artistas com estilos únicos por trás das agulhas</p>
+                        </div>
+                        <div class="about-card">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            <h3>Orçamento</h3>
+                            <p>Transforme sua ideia em realidade</p>
+                        </div>
+                        <div class="about-card">
+                            <i class="fas fa-heart"></i>
+                            <h3>Sobre Nós</h3>
+                            <p>Referência em arte e cuidado desde 2022</p>
+                        </div>
+                    </div>
+                    
+                    <p class="cta-text">Vamos criar algo incrível juntos?</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipe -->
+        <section id="section-team" class="section bg-dark">
+            <div class="container">
+                <h2 class="section-title">Nossa Equipe</h2>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assets/images/GIOVANNA.jpg" alt="Giovanna (Gi)">
+                    </div>
+                    <div class="member-info">
+                        <h3>Giovanna (Gi)</h3>
+                        <p>
+                            Desde pequena, a arte sempre fez parte da minha vida. Lembro com carinho das horas 
+                            dedicadas a colorir livros, criar desenhos e inventar formas diferentes de escrever 
+                            nos trabalhos escolares.
+                        </p>
+                        <p>
+                            Em 2021, tive minha primeira experiência com a tatuagem de forma inesquecível. 
+                            Foi ali que entendi que essa arte fazia parte do meu propósito.
+                        </p>
+                        <p>
+                            Dois anos depois, conheci o Alex. A pessoa que mudou minha vida pessoal e profissional. 
+                            Hoje ele é meu noivo, também parceiro de estúdio e CEO da RTG Tattoo.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="team-member reverse">
+                    <div class="member-image">
+                        <img src="assets/images/ALEX.jpg" alt="Alex">
+                    </div>
+                    <div class="member-info">
+                        <h3>Alex</h3>
+                        <p>
+                            Oi, sou o Alex, parceiro e CEO do estúdio RTG Tattoo.
+                            A tatuagem, para mim, é mais do que um ofício — é uma forma de eternizar histórias, 
+                            emoções e identidade na pele das pessoas.
+                        </p>
+                        <p>
+                            Em 2022 conheci a Gi. Uma mulher linda, amável, com uma energia e um astral contagiante. 
+                            Apoiei ela desde o início à montar um estúdio de tatuagem.
+                        </p>
+                        <p>
+                            Inspirado no talento e na arte que a Gi executa com excelência, me inspirei também a 
+                            criar e gerenciar processos para facilitar a realização do trabalho da nossa tatuadora.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria -->
+        <section id="section-gallery" class="section">
+            <br>
+            <div class="container">
+                <h2 class="section-title">Nossos Trabalhos</h2>
+                <div class="gallery-grid">
+                    <!-- 12 cards de galeria -->
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x300?text=Tattoo+1" alt="Tatuagem 1">
+                        <div class="gallery-overlay">
+                            <p>Estilo Fine Line</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x300?text=Tattoo+2" alt="Tatuagem 2">
+                        <div class="gallery-overlay">
+                            <p>Realismo</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x300?text=Tattoo+3" alt="Tatuagem 3">
+                        <div class="gallery-overlay">
+                            <p>Geométrico</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x300?text=Tattoo+4" alt="Tatuagem 4">
+                        <div class="gallery-overlay">
+                            <p>Old School</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x300?text=Tattoo+5" alt="Tatuagem 5">
+                        <div class="gallery-overlay">
+                            <p>Blackwork</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x300?text=Tattoo+6" alt="Tatuagem 6">
+                        <div class="gallery-overlay">
+                            <p>Aquarela</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x300?text=Tattoo+7" alt="Tatuagem 7">
+                        <div class="gallery-overlay">
+                            <p>Tribal</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x300?text=Tattoo+8" alt="Tatuagem 8">
+                        <div class="gallery-overlay">
+                            <p>Minimalista</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x300?text=Tattoo+9" alt="Tatuagem 9">
+                        <div class="gallery-overlay">
+                            <p>Retrato</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x300?text=Tattoo+10" alt="Tatuagem 10">
+                        <div class="gallery-overlay">
+                            <p>Pontilhismo</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x300?text=Tattoo+11" alt="Tatuagem 11">
+                        <div class="gallery-overlay">
+                            <p>Oriental</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x300?text=Tattoo+12" alt="Tatuagem 12">
+                        <div class="gallery-overlay">
+                            <p>Trash Polka</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-more">
+                    <a href="https://www.instagram.com/studio.rtgtattoo/" target="_blank" class="btn btn-outline">
+                        <i class="fab fa-instagram"></i> Ver Mais no Instagram
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Orçamento -->
+        <section id="section-orcamento" class="section bg-dark">
+            <div class="container">
+                <h2 class="section-title">Solicite um Orçamento</h2>
+                <form id="form-orcamento">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tamanho">Tamanho Aproximado (cm)</label>
+                            <input type="text" id="tamanho" name="tamanho">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="local">Local do Corpo</label>
+                        <input type="text" id="local" name="local">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="descricao">Descrição da Tatuagem</label>
+                        <textarea id="descricao" name="descricao" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="referencia">Tem alguma referência? (Link ou descrição)</label>
+                        <textarea id="referencia" name="referencia" rows="2"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">
+                        <i class="fas fa-paper-plane"></i> Enviar Solicitação
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Endereço -->
+        <section id="section-address" class="section">
+            <div class="container">
+                <h2 class="section-title">Onde Estamos</h2>
+                <div class="address-content">
+                    <div class="address-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Rua Otto Boehm, 834 - América</p>
+                        <p><i class="fas fa-city"></i> Joinville, Santa Catarina</p>
+                        <p><i class="fas fa-clock"></i> Segunda a Sábado: 10h às 19h</p>
+                        <a href="https://goo.gl/maps/example" target="_blank" class="btn">
+                            <i class="fas fa-map-marked-alt"></i> Ver no Mapa
+                        </a>
+                    </div>
+                    <div class="address-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3575.917700723804!2d-48.85228812435511!3d-26.32597157692529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deb04e8d3f04b3%3A0x4e6b3a8d3d8b3b7a!2sR.%20Otto%20Boehm%2C%20834%20-%20Am%C3%A9rica%2C%20Joinville%20-%20SC%2C%2089201-495!5e0!3m2!1spt-BR!2sbr!4v1650000000000!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="section-contact" class="section bg-dark">
+            <div class="container">
+                <h2 class="section-title">Fale Conosco</h2>
+                <div class="contact-grid">
+                    <div class="contact-method">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>WhatsApp</h3>
+                        <p>(47) 99747-3919</p>
+                        <a href="https://wa.me/5547997473919" class="btn btn-small">
+                            <i class="fab fa-whatsapp"></i> Enviar Mensagem
+                        </a>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="fab fa-instagram"></i>
+                        <h3>Instagram</h3>
+                        <p>@studio.rtgtattoo</p>
+                        <a href="https://www.instagram.com/studio.rtgtattoo/" target="_blank" class="btn btn-small">
+                            <i class="fab fa-instagram"></i> Seguir
+                        </a>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>studio@rtgtattoo.com.br</p>
+                        <a href="mailto:studio@rtgtattoo.com.br" class="btn btn-small">
+                            <i class="fas fa-paper-plane"></i> Enviar Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+     <footer id="footer-menu"></footer>
+    
+    
+</body>
+</html>
+
+    
     
 </body>
 </html>
