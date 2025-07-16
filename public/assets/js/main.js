@@ -1,27 +1,40 @@
-// Script para enviar formulário por email
-document.getElementById('form-orcamento').addEventListener('submit', function(e) {
-    e.preventDefault();
+// Configuração do botão de WhatsApp
+document.getElementById('btn-enviar').addEventListener('click', function() {
+    // Obter valores do formulário
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const telefone = document.getElementById('telefone').value;
+    const tamanho = document.getElementById('tamanho').value;
+    const local = document.getElementById('local').value;
+    const descricao = document.getElementById('descricao').value;
+    const referencia = document.getElementById('referencia').value;
     
-    const nome = encodeURIComponent(document.getElementById('nome').value);
-    const email = encodeURIComponent(document.getElementById('email').value);
-    const telefone = encodeURIComponent(document.getElementById('telefone').value);
-    const tamanho = encodeURIComponent(document.getElementById('tamanho').value);
-    const local = encodeURIComponent(document.getElementById('local').value);
-    const descricao = encodeURIComponent(document.getElementById('descricao').value);
-    const referencia = encodeURIComponent(document.getElementById('referencia').value);
+    // Construir mensagem formatada para WhatsApp
+    const mensagem = `*Nova Solicitação de Orçamento - RTG Tattoo*%0A%0A` +
+                        `*Nome:* ${nome}%0A` +
+                        `*Email:* ${email}%0A` +
+                        `*Telefone:* ${telefone}%0A` +
+                        `*Tamanho:* ${tamanho || 'Não informado'}%0A` +
+                        `*Local do corpo:* ${local || 'Não informado'}%0A` +
+                        `*Descrição:*%0A${descricao}%0A%0A` +
+                        `*Referências:*%0A${referencia || 'Nenhuma referência fornecida'}`;
     
-    const assunto = "Solicitação de Orçamento - " + nome;
-    const corpo = `Nome: ${nome}%0AEmail: ${email}%0ATelefone: ${telefone}%0A%0ATamanho: ${tamanho}%0ALocal: ${local}%0A%0ADescrição:%0A${descricao}%0A%0AReferência:%0A${referencia}`;
+    // Criar link do WhatsApp
+    const whatsappUrl = `https://wa.me/5547997473919?text=${mensagem}`;
     
-    window.location.href = `mailto:studio@rtgtattoo.com.br?subject=${assunto}&body=${corpo}`;
+    // Abrir WhatsApp
+    window.open(whatsappUrl, '_blank');
     
     // Feedback visual
-    const btn = this.querySelector('button');
+    const btn = this;
+    const originalText = btn.innerHTML;
+    
     btn.innerHTML = '<i class="fas fa-check"></i> Enviado!';
-    btn.disabled = true;
+    btn.classList.add('btn-success');
+    
     setTimeout(() => {
-        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Solicitação';
-        btn.disabled = false;
+        btn.innerHTML = originalText;
+        btn.classList.remove('btn-success');
     }, 3000);
 });
 
@@ -31,3 +44,4 @@ document.querySelector('.menu-toggle').addEventListener('click', function() {
     this.querySelector('i').classList.toggle('fa-bars');
     this.querySelector('i').classList.toggle('fa-times');
 });
+

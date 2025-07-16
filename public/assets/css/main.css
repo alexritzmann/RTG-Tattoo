@@ -291,7 +291,7 @@ body {
     font-size: 1.8rem;
     margin-top: 3rem;
     font-weight: 700;
-    color: var(--primary);
+    color: whitesmoke;
 }
 
 /* Team Section */
@@ -607,6 +607,7 @@ button[type="submit"] {
 .texto-about-card{
     font-size: 1rem;
 }
+
 
 /* Responsividade */
 @media (max-width: 992px) {
