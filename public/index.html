@@ -33,17 +33,17 @@
         <menu>
             <nav>
                 <ul class="menu-items">
-                    <li><a class="menu-link" href="#section-about">Sobre</a></li>
-                    <li><a class="menu-link" href="#section-team">Equipe</a></li>
-                    <li><a class="menu-link" href="#section-gallery">Galeria</a></li>
+                    <li><a class="menu-link fonte-the-seasons" href="#section-about">Sobre</a></li>
+                    <li><a class="menu-link fonte-the-seasons" href="#section-team">Equipe</a></li>
+                    <li><a class="menu-link fonte-the-seasons" href="#section-gallery">Galeria</a></li>
                     <li class="logo-item"> 
                         <a href="#">
                             <img id="img-logo" src="assets/images/logo-png.png" alt="Logo RTG">
                         </a>
                     </li>
-                    <li><a class="menu-link" href="#section-orcamento">Orçamento</a></li>
-                    <li><a class="menu-link" href="#section-address">Endereço</a></li>
-                    <li><a class="menu-link" href="#section-contact">Contato</a></li>
+                    <li><a class="menu-link fonte-the-seasons" href="#section-orcamento">Orçamento</a></li>
+                    <li><a class="menu-link fonte-the-seasons" href="#section-address">Endereço</a></li>
+                    <li><a class="menu-link fonte-the-seasons" href="#section-contact">Contato</a></li>
                 </ul>
             </nav>
         </menu>
@@ -53,20 +53,20 @@
         <!-- Hero Section -->
         <section id="section-principal">
             <div class="hero-content">
-                <h1>Bem-Vindo à</h1>
-                <h1>RTG Tattoo!</h1>
-                <p>Arte que marca histórias</p>
-                <a href="#section-orcamento" class="btn">Solicitar Orçamento</a>
+                <span class="fonte-the-seasons">Bem</span><span class="caracter-especial">-</span><span class="fonte-the-seasons">Vindo à</span> 
+                <h1 class="fonte-mestizo">RTG Tattoo!</h1>
+                <p class="fonte-the-seasons">Arte que marca histórias</p>
+                <a href="#section-orcamento" class="btn fonte-the-seasons" >Solicitar Orçamento</a>
             </div>
         </section>
 
         <!-- Sobre -->
         <section id="section-about" class="section">
-            <br>
+            <br><br>
             <div class="container">
                 <h2 class="section-title">Nossa Essência</h2>
                 <div class="about-content">
-                    <p>
+                    <p class="fonte-the-seasons texto-essencia">
                         Somos mais que um estúdio de tatuagem: somos contadores de histórias em pele. 
                         Cada traço que fazemos carrega identidade, paixão e um pouco de magia. 
                         Aqui, sua ideia ganha vida pelas mãos de artistas excepcionais, em um espaço seguro e inspirador.
@@ -76,22 +76,22 @@
                         <div class="about-card">
                             <i class="fas fa-palette"></i>
                             <h3>Galeria</h3>
-                            <p>Veja obras que já marcaram corpos e almas</p>
+                            <p class="fonte-the-seasons texto-about-card">Veja obras que já marcaram corpos e almas</p>
                         </div>
                         <div class="about-card">
                             <i class="fas fa-users"></i>
                             <h3>Equipe</h3>
-                            <p>Artistas com estilos únicos por trás das agulhas</p>
+                            <p class="fonte-the-seasons texto-about-card">Artistas com estilos únicos por trás das agulhas</p>
                         </div>
                         <div class="about-card">
                             <i class="fas fa-file-invoice-dollar"></i>
                             <h3>Orçamento</h3>
-                            <p>Transforme sua ideia em realidade</p>
+                            <p class="fonte-the-seasons texto-about-card">Transforme sua ideia em realidade</p>
                         </div>
                         <div class="about-card">
                             <i class="fas fa-heart"></i>
                             <h3>Sobre Nós</h3>
-                            <p>Referência em arte e cuidado desde 2022</p>
+                            <p class="fonte-the-seasons texto-about-card">Referência em arte e cuidado desde 2022</p>
                         </div>
                     </div>
                     
@@ -103,6 +103,7 @@
         <!-- Equipe -->
         <section id="section-team" class="section bg-dark">
             <div class="container">
+                <br>
                 <h2 class="section-title">Nossa Equipe</h2>
                 
                 <div class="team-member">
@@ -110,7 +111,7 @@
                         <img src="assets/images/GIOVANNA.jpg" alt="Giovanna (Gi)">
                     </div>
                     <div class="member-info">
-                        <h3>Giovanna (Gi)</h3>
+                        <h3>Giovanna</h3>
                         <p>
                             Desde pequena, a arte sempre fez parte da minha vida. Lembro com carinho das horas 
                             dedicadas a colorir livros, criar desenhos e inventar formas diferentes de escrever 
@@ -135,7 +136,7 @@
                         <h3>Alex</h3>
                         <p>
                             Oi, sou o Alex, parceiro e CEO do estúdio RTG Tattoo.
-                            A tatuagem, para mim, é mais do que um ofício — é uma forma de eternizar histórias, 
+                            A tatuagem, para mim, é mais do que um ofício, é uma forma de eternizar histórias, 
                             emoções e identidade na pele das pessoas.
                         </p>
                         <p>
@@ -155,6 +156,7 @@
         <section id="section-gallery" class="section">
             <br>
             <div class="container">
+                <br>
                 <h2 class="section-title">Nossos Trabalhos</h2>
                 <div class="gallery-grid">
                     <!-- 12 cards de galeria -->
@@ -242,6 +244,7 @@
         <!-- Orçamento -->
         <section id="section-orcamento" class="section bg-dark">
             <div class="container">
+                <br>
                 <h2 class="section-title">Solicite um Orçamento</h2>
                 <form id="form-orcamento">
                     <div class="form-row">
@@ -261,8 +264,8 @@
                             <input type="tel" id="telefone" name="telefone" required>
                         </div>
                         <div class="form-group">
-                            <label for="tamanho">Tamanho Aproximado (cm)</label>
-                            <input type="text" id="tamanho" name="tamanho">
+                            <label for="tamanho">Tamanho Aproximado</label>
+                            <input placeholder="(em centímetros)" type="text" id="tamanho" name="tamanho">
                         </div>
                     </div>
                     
@@ -277,8 +280,8 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="referencia">Tem alguma referência? (Link ou descrição)</label>
-                        <textarea id="referencia" name="referencia" rows="2"></textarea>
+                        <label for="referencia">Tem alguma referência?</label>
+                        <textarea placeholder="Link ou descrição" id="referencia" name="referencia" rows="2"></textarea>
                     </div>
                     
                     <button type="submit" class="btn">
@@ -291,12 +294,13 @@
         <!-- Endereço -->
         <section id="section-address" class="section">
             <div class="container">
+                <br>
                 <h2 class="section-title">Onde Estamos</h2>
                 <div class="address-content">
                     <div class="address-info">
-                        <p><i class="fas fa-map-marker-alt"></i> Rua Otto Boehm, 834 - América</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Rua Otto Boehm, <span class = "caracter-especial span-endereco">&nbsp 834 - &nbsp</span> América</p>
                         <p><i class="fas fa-city"></i> Joinville, Santa Catarina</p>
-                        <p><i class="fas fa-clock"></i> Segunda a Sábado: 10h às 19h</p>
+                        <p><i class="fas fa-clock"></i> Segunda a Sábado: 16h às 23h</p>
                         <a href="https://www.google.com/maps/place/Studio+RTG+Tattoo/data=!4m2!3m1!1s0x0:0xf6fc5e9f18e7f982?sa=X&ved=1t:2428&ictx=111" target="_blank" class="btn">
                             <i class="fas fa-map-marked-alt"></i> Ver no Mapa
                         </a>
@@ -316,28 +320,22 @@
                     <div class="contact-method">
                         <i class="fab fa-whatsapp"></i>
                         <h3>WhatsApp</h3>
-                        <p>(47) 99747-3919</p>
-                        <a href="https://wa.me/5547997473919" class="btn btn-small">
-                            <i class="fab fa-whatsapp"></i> Enviar Mensagem
-                        </a>
+                        <p class="fonte-normal">(47) 99747-3919</p>
+                        <a href="https://wa.me/5547997473919" class="btn btn-small">Enviar Mensagem</a>
                     </div>
                     
                     <div class="contact-method">
                         <i class="fab fa-instagram"></i>
                         <h3>Instagram</h3>
-                        <p>@studio.rtgtattoo</p>
-                        <a href="https://www.instagram.com/studio.rtgtattoo/" target="_blank" class="btn btn-small">
-                            <i class="fab fa-instagram"></i> Seguir
-                        </a>
+                        <p class="fonte-normal">@studio.rtgtattoo</p>
+                        <a href="https://www.instagram.com/studio.rtgtattoo/" target="_blank" class="btn btn-small">Seguir</a>
                     </div>
                     
                     <div class="contact-method">
                         <i class="fas fa-envelope"></i>
                         <h3>Email</h3>
-                        <p>studio@rtgtattoo.com.br</p>
-                        <a href="mailto:studio@rtgtattoo.com.br" class="btn btn-small">
-                            <i class="fas fa-paper-plane"></i> Enviar Email
-                        </a>
+                        <p class="fonte-normal">studio@rtgtattoo.com.br</p>
+                        <a href="mailto:studio@rtgtattoo.com.br" class="btn btn-small">Enviar Email</a>
                     </div>
                 </div>
             </div>
