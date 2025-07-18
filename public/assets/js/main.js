@@ -39,11 +39,28 @@ document.getElementById('btn-enviar').addEventListener('click', function() {
 });
 
 // Menu mobile toggle
-document.querySelector('.menu-toggle').addEventListener('click', function() {
-    document.querySelector('.menu-items').classList.toggle('active');
-    this.querySelector('i').classList.toggle('fa-bars');
-    this.querySelector('i').classList.toggle('fa-times');
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuItems = document.querySelector('.menu-items');
+    
+    if(menuToggle && menuItems) {
+        menuToggle.addEventListener('click', function() {
+            // Alternar menu
+            menuItems.classList.toggle('active');
+            
+            // Alternar ícones
+            const icon = this.querySelector('i');
+            if(icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+            
+            // Bloquear scroll quando menu aberto
+            document.body.style.overflow = menuItems.classList.contains('active') ? 'hidden' : '';
+        });
+    }
 });
+
 
 document.addEventListener('DOMContentLoaded', function() {
     // Configura o modal
