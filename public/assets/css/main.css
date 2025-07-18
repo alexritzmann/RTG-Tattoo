@@ -26,14 +26,14 @@ body {
 
 @font-face {
     font-family: Mestizzo;
-    src: url('./assets/fonts/Mestizo_Font.woff2') format('woff2'),
-        url('./assets/fonts/Mestizo_Font.woff') format('woff');
+    src: url('../fonts/Mestizo_Font.woff2') format('woff2'),
+        url('../fonts/Mestizo_Font.woff') format('woff');
 }
 
 @font-face {
     font-family: TheSeasons;
-    src: url('./assets/fonts/TheSeasonsRegular.woff2') format('woff2'),
-        url('./assets/fonts/TheSeasonsRegular.woff') format('woff');
+    src: url('../fonts/TheSeasonsRegular.woff2') format('woff2'),
+        url('../fonts/TheSeasonsRegular.woff') format('woff');
 }
 
 .fonte-the-seasons{
@@ -721,7 +721,7 @@ button[type="submit"] {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('./assets/images//logo-png.PNG');
+    background-image: url('../images/logo-png.PNG');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 70%;
