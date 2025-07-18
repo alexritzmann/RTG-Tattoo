@@ -714,3 +714,50 @@ button[type="submit"] {
         opacity: 1;
     }
 }
+
+#logo-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/public/assets/images//logo-png.PNG');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(5px);
+    mix-blend-mode: overlay;
+    pointer-events: none;
+}
+
+/* Seções com fundo escuro - logo visível */
+.bg-dark, 
+#section-principal {
+    position: relative;
+    z-index: 1;
+}
+
+/* Seções com fundo claro - logo "por trás" */
+#section-about,
+#section-gallery,
+#section-address {
+    position: relative;
+    background-color: #1a1a1a; /* Cor sólida para cobrir */
+    z-index: 2; /* Coloca na frente da logo */
+}
+
+/* Ajuste de opacidade para diferentes seções */
+#section-principal #logo-background {
+    opacity: 0.5;
+    filter: blur(8px);
+}
+
+#section-team #logo-background,
+#section-orcamento #logo-background,
+#section-contact #logo-background {
+    opacity: 0.5;
+    filter: blur(3px);
+}
+
