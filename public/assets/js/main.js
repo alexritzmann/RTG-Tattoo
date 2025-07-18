@@ -45,3 +45,42 @@ document.querySelector('.menu-toggle').addEventListener('click', function() {
     this.querySelector('i').classList.toggle('fa-times');
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Configura o modal
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("expandedImg");
+    const captionText = document.getElementById("imgCaption");
+    const closeBtn = document.querySelector(".close");
+    
+    // Adiciona evento de clique para todas as imagens da galeria
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+            document.body.style.overflow = "hidden"; // Desabilita scroll da página
+        });
+    });
+    
+    // Fecha o modal ao clicar no X
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto"; // Reabilita scroll
+    });
+    
+    // Fecha o modal ao clicar fora da imagem
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    });
+    
+    // Fecha com a tecla ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === "Escape" && modal.style.display === "block") {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    });
+});
