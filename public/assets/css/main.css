@@ -147,6 +147,7 @@ body {
     align-items: center;
     list-style: none;
     padding: 1rem 0;
+    margin-left: 5rem;
 }
 
 .menu-items li {
