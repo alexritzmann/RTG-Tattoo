@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Adiciona evento de clique para todas as imagens da galeria
         document.querySelectorAll('.gallery-item img').forEach(img => {
             img.addEventListener('click', function() {
+                console.log("aqui");
                 modal.style.display = "block";
                 modalImg.src = this.src;
                 captionText.innerHTML = this.alt;
@@ -99,7 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.body.style.overflow = "auto";
             });
         }
-        
         // Fecha o modal ao clicar fora da imagem
         modal.addEventListener('click', function(e) {
             if (e.target === modal) {
